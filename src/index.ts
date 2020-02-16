@@ -9,7 +9,7 @@ const appRoot = process.cwd()
 const BENCHMARK_DIR = `${appRoot}/benchmark_${new Date().getTime()}`
 const CURRENT_BENCH_DIR = `${BENCHMARK_DIR}/current`
 const BASE_BENCH_DIR = `${BENCHMARK_DIR}/base`
-const FILENAME = process.env.FILENAME || 'benchmark/index'
+const FILENAME = process.env.BENCHMARK_PATH || 'benchmark/index'
 
 // @ts-ignore
 const Benchmark = benchmark.runInContext({ _, process })
