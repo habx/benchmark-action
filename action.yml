@@ -1,0 +1,5 @@
+name: 'JS benchmarking'
+description: 'JS benchmarking'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

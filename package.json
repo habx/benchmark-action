@@ -1,0 +1,47 @@
+{
+  "name": "js-benchmarking-action",
+  "version": "1.0.0",
+  "description": "js-benchmarking-action",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "bili"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run build && git add dist"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "keywords": [],
+  "author": "Jean Dessane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+  },
+  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "@habx/eslint-config-client": "^2.8.0",
+    "@types/benchmark": "^1.0.31",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.7.1",
+    "@types/node-fetch": "^2.5.4",
+    "@types/shelljs": "^0.8.6",
+    "benchmark": "^2.1.4",
+    "bili": "^4.8.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "typescript": "^3.7.5"
+  }
+}
