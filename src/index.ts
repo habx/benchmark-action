@@ -69,7 +69,7 @@ const benchmarck = async () => {
     // Current branch
     try {
       await exec(
-        `tsc ${FILENAME}.ts --outDir ${CURRENT_BENCH_DIR} --resolveJsonModule`
+        `tsc ${FILENAME}.ts --outDir ${CURRENT_BENCH_DIR}  --target ES2018 --skipLibCheck --resolveJsonModule --moduleResolution node`
       )
       const currentFunctionDefinitions = require(`${CURRENT_BENCH_DIR}/${FILENAME}.js`)
         .default
@@ -88,7 +88,7 @@ const benchmarck = async () => {
     // Base branch
     await exec(`git checkout ${BASE_BRANCH}`)
     await exec(
-      `tsc ${FILENAME}.ts --outDir ${BASE_BENCH_DIR} --resolveJsonModule`
+      `tsc ${FILENAME}.ts --outDir ${BASE_BENCH_DIR}  --target ES2018 --skipLibCheck --resolveJsonModule --moduleResolution node`
     )
     try {
       const baseFunctionDefinitions = require(`${BASE_BENCH_DIR}/${FILENAME}.js`)
