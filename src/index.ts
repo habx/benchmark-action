@@ -113,9 +113,11 @@ const benchmarck = async () => {
             const results = e.currentTarget
             const diff =
               results[1] && results[0]
-                ? Math.round(
+                ? (Math.round(
                     (results[0].stats.mean - results[1].stats.mean) * PRECISION
-                  ) / PRECISION
+                  ) /
+                    PRECISION) *
+                  1000 // in ms
                 : 0
 
             addMessage({
